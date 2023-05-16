@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+}
+
+.course-navbar-temp {
+    float: center;
+    /* color: #f2f2f2; */
+    text-align: center;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: #bfdff1;
+}
+
+.course-navbar-temp > a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.course-navbar-temp > a:hover {
+    color: #004aad;
+}
+
+.marks-table-container {
+    /* display: block; */
+    margin: auto;
+    /* width: 78.5rem; */
+    max-width: 78.5rem;
+    min-height: 30.563rem;
+    overflow-x: auto;
+    padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+    height: 100%;
+}
+
+.marks-main-table, td {
+    border: 2px solid #050F20;
+    margin: 0;
+}
+
+/* column and row should be extended but will not stretch the table */
+
+.marks-main-table {
+    display: table;
+    border-spacing: 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td {
+    padding: 0.5rem 0.625rem;
+}
+
+td:first-child {
+    padding: 0.5rem 0.625rem;
+    width: 10%;
+}
+
+td:not(:first-child) {
+    width: 6%;
+    white-space: nowrap;
+}
+
+td:last-child {
+    width: auto;
+}
+
+.date-row {
+    height: 1.875rem;
+}
+
+.date-title {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    color: #000000;
+}
+
+.act-date {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    color: #000000;
+}
+
+#heading-row {
+    width: 100%;
+    height: 3rem;
+    background-color: #d9d9d9;
+}
+
+.marks-main-heading {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    color: #000000;
+    display: inline-block;
+}
+
+.student-name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.student-context-row {
+    height: 3.5rem;
+}
+
+.student-main-score {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    border: none !important;
+    border-bottom: 2px solid #cccccc !important;
+    width: 100%;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+#row-score-container, #row-class-ave {
+    background-color: #d9d9d9;
+    color: #000000;
+    font-weight: bold;
+}
+
+.act-score-container {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    text-align: center;
+}
+
+.act-score, .ave-score {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    text-align: center;
+}
+
+.class-ave-container {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    text-align: center;
+}

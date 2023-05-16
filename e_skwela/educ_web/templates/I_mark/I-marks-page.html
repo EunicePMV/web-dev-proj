@@ -1,0 +1,204 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block script %}
+    <link href="{% static 'I_mark/I-marks-page.css' %}" rel="stylesheet">
+    <script src="{% static 'I_mark/I-marks-page.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+    Marks
+{% endblock %}
+
+{% block body %}
+    <div class="course-navbar-temp">
+        <a href="{% url 'instruct_stream' %}">Stream</a>
+        <a href="{% url 'student_classwork' %}">Classwork</a>
+        <a href="{% url 'instruct_people' %}">People</a>
+        <a href="{% url 'mark' %}">Grades</a>
+    </div>
+    <div class="marks-table-container">
+        <table class="marks-main-table">
+            <tbody>
+                <tr class="date-row">
+                    <td>
+                        <div class="date-title">
+                            Date
+                        </div>
+                    </td>
+                    <td>
+                        <div class="act-date">
+                            04-24-23
+                        </div>
+                    </td>
+                    <td>
+                        <div class="act-date">
+                            Another Date
+                        </div>
+                    </td>
+                    <td>
+                        <div class="act-date">
+                            Another Date
+                        </div>
+                    </td>
+                    <td>
+                        <div class="act-date">
+                            Another Date
+                        </div>
+                    </td>
+                    <td>
+                        <div class="act-date">
+                            Another Date
+                        </div>
+                    </td>
+                </tr>
+                <tr id="heading-row">
+                    <td>
+                        <div class="marks-main-heading"> 
+                            Student Name
+                        </div>
+                    </td>
+                    <td>
+                        <div class="marks-main-heading">
+                            Activity Name
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="student-context-row">
+                    <td>
+                        <div class="student-name">
+                            Shaina Claire
+                        </div>
+                    </td>
+                    <td>
+                        <div class="student-main-score">
+                            <input type="text" class="score-input" name="score" placeholder="100" min="0" max="100">
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="student-context-row">
+                    <td>
+                        <div class="student-name">
+                            John Mark Haber
+                        </div>
+                    </td>
+                    <td>
+                        <div class="student-main-score">
+                            <input type="text" class="score-input" name="score" placeholder="100" min="0" max="100">
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="student-context-row">
+                    <td>
+                        <div class="student-name">
+                            Erika Mercado
+                        </div>
+                    </td>
+                    <td>
+                        <div class="student-main-score">
+                            <input type="text" class="score-input" name="score" placeholder="100" min="0" max="100">
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="student-context-row">
+                    <td>
+                        <div class="student-name">
+                            John Vincent Bergonio Raiz
+                        </div>
+                    </td>
+                    <td>
+                        <div class="student-main-score">
+                            <input type="text" class="score-input" name="score" placeholder="100" min="0" max="100">
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="student-context-row">
+                    <td>
+                        <div class="student-name">
+                            Kenshin R. Nablo
+                        </div>
+                    </td>
+                    <td>
+                        <div class="student-main-score">
+                            <input type="text" class="score-input" name="score" placeholder="100" min="0" max="100">
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="student-context-row">
+                    <td>
+                        <div class="student-name">
+                            Eunice Patricia M. Villanueva
+                        </div>
+                    </td>
+                    <td>
+                        <div class="student-main-score">
+                            <input type="text" class="score-input" name="score" placeholder="100" min="0" max="100">
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- if new student: insert another row of student name -->
+                <tr id="row-score-container">
+                    <td>
+                        <div class="act-score-container">
+                            Total Score / Act
+                        </div>
+                    </td>
+                    <td>
+                        <div class="act-score">
+                            / 100
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="row-class-ave">
+                    <td>
+                        <div class="class-ave-container">
+                            Class Average
+                        </div>
+                    </td>
+                    <td>
+                        <div class="ave-score">
+                            100
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

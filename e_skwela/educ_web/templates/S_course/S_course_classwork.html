@@ -1,0 +1,165 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block script %}
+    <link href="{% static 'S_course/S_course_student-classwork.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    Classwork
+{% endblock %}
+
+{% block body %}
+    <div class="course-navbar-temp">
+        <a href="{% url 'student_stream' %}">Stream</a>
+        <a href="{% url 'student_classwork' %}">Classwork</a>
+        <a href="{% url 'student_people' %}">People</a>
+    </div>
+    <div class="indiv-classwork-container">
+        <div class="work-navigation">
+            <ul>
+                <img src="{% static 'images/d6.png' %}" width=250px height=200px>
+                <li>
+                    <a href="{% url 'student_stream' %}">
+                        <span class="icon">
+                            <ion-icon name="filter-outline"></ion-icon>
+                        </span>
+                        <span class="title">Stream</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'student_classwork' %}">
+                        <span class="icon">
+                            <ion-icon name="create-outline"></ion-icon>
+                        </span>
+                        <span class="title">Classwork</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'student_people' %}">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">People</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    <!--============= Header ==================-->
+
+    <div class="main">
+        <div class="course">
+            <h1>COMP 20163 : Web Development</h1>
+        </div>
+
+            <div class="section">
+                <h3>BSCS 3-1</h3><br><br><br>
+
+            </div>
+    <!--============= Classwork Page ==================-->
+    <div class="classwork">
+    <div class="members">
+        <div class="work">
+            <h2>Assignments</h2> <hr>  
+        </div>
+        <table class="work-list">
+            <tbody>
+
+                <tr>
+                    <td>
+                        <a href="{% url 'submission' %}">
+                            <ion-icon name="document-attach-outline"></ion-icon>
+                        </a>
+                    </td>
+                    <td>Online Class Agreement</td>
+                    <div class="work-detail">
+                        <td>Due 13 May 2023</td>
+                        <td> 23:59</td>
+                    </div>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="submission page.html">
+                            <ion-icon name="document-attach-outline"></ion-icon>
+                        </a>
+                    </td>
+                    <td>Assignment 9: Laboratoy Activity 3</td>
+                    <td>Due 12 May 2023</td>
+                    <td> 23:59</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="submission page.html">
+                            <ion-icon name="document-attach-outline"></ion-icon>
+                        </a>
+                    </td>
+                    <td>Assignment 8: Create a responsive website</td>
+                    <td>Due 11 May 2023</td>
+                    <td> 23:59</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="submission page.html">
+                            <ion-icon name="document-attach-outline"></ion-icon>
+                        </a>
+                    </td>
+                    <td>Assignment 7: Create a responsive website</td>
+                    <td>Due 10 May 2023</td>
+                    <td> 23:59</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="submission page.html">
+                            <ion-icon name="document-attach-outline"></ion-icon>
+                        </a>
+                    </td>
+                    <td>Assignment #: Create a responsive website</td>
+                    <td>Due 9 May 2023</td>
+                    <td> 23:59</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="submission page.html">
+                            <ion-icon name="document-attach-outline"></ion-icon>
+                        </a>
+                    </td>
+                    <td>Assignment #: Create a responsive website</td>
+                    <td>Due 11 May 2023</td>
+                    <td> 23:59</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="submission page.html">
+                            <ion-icon name="document-attach-outline"></ion-icon>
+                        </a>
+                    </td>
+                    <td>Assignment #: Create a responsive website</td>
+                    <td>Due 10 May 2023</td>
+                    <td> 23:59</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    </div> 
+    </div>
+    </div>
+
+
+
+    <!--============= scripts ==================-->
+    <!--============= Icon ==================-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+{% endblock %}

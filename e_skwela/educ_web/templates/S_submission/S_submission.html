@@ -1,0 +1,79 @@
+{%  extends 'layout.html' %}
+
+{% load static %}
+
+{% block script %}
+    <link href="{% static 'S_submission/S_submission.css' %}" rel="stylesheet">
+    <script src="{% static 'S_submission/S_submission.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+    Submit
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="body-internal-container">
+            <div class="act-logo-container">
+                <div class="act-logo">
+                    <img src="{% static '/images/File Doc.png' %}" id="file-doc-logo" alt="Dark File Document Logo" width="35" height="35">
+                </div>
+            </div>
+            <div class="main-instruct-container">
+                <div class="act-name-context" id="act-name-context">
+                    Activity Name
+                    <!-- should be visible only in instructor's login -->
+                    <img src="{% static '/images/Subtract.png' %}" id="edit-doc-logo" alt="Dark Edit File Document Logo" width="25" height="25">
+                </div>
+                <div class="instruct-details-container">
+                    <span class="instruct-title-context">
+                        Instructions
+                    </span>
+                    <div class="instruct-details-context">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repudiandae placeat corrupti nostrum accusantium vero porro 
+                        voluptas ipsa culpa corporis nemo error similique provident 
+                        libero voluptate consequatur animi, voluptatibus recusandae 
+                        laborum perspiciatis ea nam quibusdam. Iusto distinctio maxime 
+                        soluta deleniti pariatur eius illum, nihil consectetur dolor? Sunt 
+                        quam consequatur tempore blanditiis?
+                    </div>
+                    <div class="submission-bin-container-responsive">
+                        <div class="due-pts-container">
+                            <div class="due-date-time-context">
+                                Due January 01, 2023 | 11:59 PM
+                            </div>
+                            <div class="pts-context">
+                                100 points
+                            </div>
+                        </div>
+                        <label for="upload-file" class="upload-file-container">
+                            Upload file
+                            <input type="file" id="upload-file" multiple />
+                        </label>
+                        <div class="submit-file-container">
+                            Submit
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="submission-bin-container" id="submission-bin-container">
+                <div class="due-pts-container">
+                    <div class="due-date-time-context">
+                        Due January 01, 2023 | 11:59 PM
+                    </div>
+                    <div class="pts-context">
+                        100 points
+                    </div>
+                </div>
+                <label for="upload-file" class="upload-file-container" id="upload-file-container">
+                    Upload file
+                    <input type="file" id="upload-file-container" multiple />
+                </label>
+                <div class="submit-file-container">
+                    Submit
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

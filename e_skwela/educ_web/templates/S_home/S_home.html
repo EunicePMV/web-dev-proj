@@ -1,0 +1,210 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block script %}
+    <link href="{% static 'S_home/S_home.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="container" style="text-align: center; margin-top: 50px;">
+            <img class="dashboard-header" src="{% static '/images/dashboard.png' %}" alt="Dashboard">
+
+            <div class="dashboard-calendar">
+                <div class="day">
+                    <h6>Sun</h6>
+                    <h2>16</h2>
+                </div>
+                <div class="day">
+                    <h6>Mon</h6>
+                    <h2>17</h2>
+                </div>
+                <div class="day">
+                    <h6>Tues</h6>
+                    <h2>18</h2>
+                </div>
+                <div class="day">
+                    <h6>Wed</h6>
+                    <h2>19</h2>
+                </div>
+                <div class="day">
+                    <h6>Thurs</h6>
+                    <h2>20</h2>
+                </div>
+                <div class="day">
+                    <h6>Frid</h6>
+                    <h2>21</h2>
+                </div>
+                <div class="day">
+                    <h6>Sat</h6>
+                    <h2>22</h2>
+                </div>
+                <div class="next-button" style="cursor: pointer;">
+                    <img src="{% static '/images/next-button.png' %}">
+                </div>
+            </div>
+            <div class="dashboard-courses">
+                <div class="courses">
+                    <img src="{% static '/images/d1.png' %}" title="Web Development">
+                    <h5 style="text-align: left; padding-left: 20px;">COMP 20163</h5>
+                    <h6 style="text-align: left; padding-left: 20px;">
+                        <a href="{% url 'student_stream' %}">
+                            Web Development
+                        </a>
+                    </h6>
+                    <div class="professor">
+                        <img src="{% static '/images/prof1.png' %}">
+                        <p>Kris Perucho Garcia</p>
+                    </div>
+                </div>
+                <div class="courses">
+                    <img src="{% static '/images/d2.png' %}" title="Information Assurance and Security">
+                    <h5 style="text-align: left; padding-left: 20px;">COMP 20053</h5>
+                    <h6 style="text-align: left; padding-left: 20px;">
+                        <a href="{% url 'instruct_stream' %}">
+                            Information Assurance and Security
+                        </a>
+                    </h6>
+                    <div class="professor">
+                        <img src="{% static '/images/prof2.png' %}">
+                        <p>John Dustin Santos</p>
+                    </div>
+                </div>
+                <div class="courses">
+                    <img src="{% static '/images/d3.png' %}" title="Data Comm. & Networking">
+                    <h5 style="text-align: left; padding-left: 20px;">COMP 20173</h5>
+                    <h6 style="text-align: left; padding-left: 20px;">Data Comm. & Networking</h6>
+                    <div class="professor">
+                        <img src="{% static '/images/prof3.png' %}">
+                        <p>Mariel Leo Violeta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container"
+            style="text-align: center; justify-content: center; display: flex; padding-bottom: 50px;">
+            <div class="courses">
+                <img src="{% static '/images/d4.png' %}" title="Intro to Artificial Intelligence">
+                <h5 style="text-align: left; padding-left: 20px;">COMP 30073</h5>
+                <h6 style="text-align: left; padding-left: 20px;">Intro to Artificial Intelligence</h6>
+                <div class="professor">
+                    <img src="{% static '/images/prof1.png' %}">
+                    <p>Ria Sagum</p>
+                </div>
+            </div>
+            <div class="courses">
+                <img src="{% static '/images/d5.png' %}" title="CS Thesis Writing 1">
+                <h5 style="text-align: left; padding-left: 20px;">COMP 40013</h5>
+                <h6 style="text-align: left; padding-left: 20px;">CS Thesis Writing 1</h6>
+                <div class="professor">
+                    <img src="{% static '/images/prof2.png' %}">
+                    <p>Mary Jane Tan</p>
+                </div>
+            </div>
+            <div class="courses">
+                <div class="add-course">
+                    <h5 style="padding-top: 40px;">Create a Class</h5>
+                    <img src="{% static '/images/Add.png' %}" data-bs-toggle="modal" data-bs-target="#create-class"
+                        title="Create Class">
+                    <div class="modal fade" id="create-class" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: #3443CF;">Create
+                                        Class</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="create-class-form">
+                                        <input type="text" placeholder="Class Name (Required)" class="form-control"
+                                            required
+                                            style="margin: 20px; border-radius: 30px; background-color: #BFDFF1; width: 90%; height: 40px;">
+                                        <input type="text" placeholder="Section" class="form-control"
+                                            style="margin: 20px;  border-radius: 30px; background-color: #BFDFF1; width: 90%; height: 40px">
+                                        <input type="text" placeholder="Subject" class="form-control"
+                                            style="margin: 20px;  border-radius: 30px; background-color: #BFDFF1; width: 90%; height: 40px">
+                                        <input type="text" placeholder="Room" class="form-control"
+                                            style="margin: 20px;  border-radius: 30px; background-color: #BFDFF1; width: 90%; height: 40px">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-bs-dismiss="modal" class="cancel-create-button"
+                                        style="border-color: transparent; background-color: transparent;">Cancel</button>
+                                    <button type="button" class="create-button"
+                                        style="border-color: transparent; background-color: transparent;">Create</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Join a Class</h5>
+                    <img src="{% static '/images/Add.png' %}" data-bs-toggle="modal" data-bs-target="#join-class" title="Join class">
+                    <div class="modal fade" id="join-class" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: #3443CF;">Join
+                                        Class</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <input type="text" placeholder="Class Code" class="form-control" required
+                                            style="margin: 20px; border-radius: 30px; background-color: #BFDFF1; width: 90%; height: 80px; text-align: center; font-size: 40px; text-transform: uppercase;">
+                                    </form>
+                                    <hr style="margin-bottom: 10px; margin-right: 20px; margin-left: 20px;">
+                                    <div class="desc" style="text-align: left; font-size: 14px;">
+                                        <p style="margin-bottom: 0; text-indent: 20px;">
+                                            To sign in with a class code:
+                                        <ul style="margin-left: 20px;">
+                                            <li>Ask your teacher for the class code, then enter it here.</li>
+                                            <li>Use and authorized account</li>
+                                            <li>Use a class code with 5-7 letters or numbers, and no spaces or symbols
+                                            </li>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-bs-dismiss="modal" class="cancel-join-button"
+                                        style="border-color: transparent; background-color: transparent;">Cancel</button>
+                                    <div class="button">
+                                        <button id="newDiv" type="button" class="join-button"
+                                            style="border-color: transparent; background-color: transparent;">Join</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu");
+        }
+
+        function createDiv() {
+            // Create a new div element
+            const newDiv = document.createElement("div");
+
+            // Set the div's text content
+            newDiv.textContent = "New Div";
+
+            // Append the div to the body element
+            document.body.appendChild(newDiv);
+        }
+    </script>
+{% endblock %}

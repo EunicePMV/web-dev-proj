@@ -1,0 +1,204 @@
+:root {
+    --main-bg-color: #bfdff1;
+    --main-font-color: #3443cf;
+    --border-color: #1e1e1e;
+    --button-disabled: #7d9dba;
+    --table-border: 1vw;
+}
+
+html {
+    transition: all 200ms ease-in 0ms;
+    font-size: 12px;
+    font-family: 'Quicksand', sans-serif;
+}
+html, body{
+    margin: 0px;
+}
+.course-navbar-temp {
+    /* display: none; */
+    float: center;
+    /* color: #f2f2f2; */
+    text-align: center;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: #bfdff1;
+}
+
+.course-navbar-temp > a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.course-navbar-temp > a:hover {
+    color: #004aad;
+}
+
+header {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    min-height: 5rem;
+}
+
+footer {
+    position: relative;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    min-height: 15rem;
+}
+
+.instructor{
+    display:flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    padding: 16px 0;
+}
+
+#i-profile{
+    aspect-ratio: 1/1;
+    width: 7.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 19.6px;
+    background-color: var(--main-bg-color);
+}
+#i-profile img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#i-name{
+    font-size: large;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#selectAll{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 16px;
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+    background-color: var(--main-font-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+}
+#selectAll input[type=checkbox]{
+    transform: scale(1.25);
+    margin-right: 16px;
+}
+#selection{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+#selectButton, #sorter{
+    display: flex;
+    color: var(--main-font-color);
+    border-radius: 100px;
+    border: none;
+    aspect-ratio: 1/1;
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1.2rem !important;
+    background-color:var(--main-bg-color);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+#selectButton[disabled] i, button:disabled i{
+    color: var(--button-disabled);
+    cursor: default;
+}
+
+#tableHandler{
+    display: block;
+    width: 50%;
+    margin:auto;
+    min-height: 75vh;
+}
+#students{
+    display: block;
+    width: 100%;    
+}
+#students table{
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+#students th{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 1.5rem;
+    height: 2.5rem;
+}
+#students tr:first-child{
+    height: 4rem;
+    border-bottom-width: 2px;
+    margin-bottom: 1rem;
+}
+#students tr{
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    border-bottom: 1px var(--button-disabled) solid;
+    width: 100%;
+}
+#students th:first-child, td:first-child{
+    display: flex;
+    width: 3.5rem;
+    align-items: center;
+    justify-content: center;
+}
+#sort{
+    align-self: center;
+}
+.info{
+    display:flex;
+    flex-direction: column;
+}
+.name{
+    font-size: 12px;
+    line-height: 10px;
+    font-weight: bolder;
+}
+.email{
+    font-size: .75rem;
+}
+
+@media screen and (max-width: 600px){
+    #tableHandler{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    #tableHandler{
+        width: 96%;
+    }
+}
+
+@media screen and (max-width: 350px){
+    #students{
+        height:fit-content;
+        max-height: fit-content;
+        min-height: fit-content;
+        width: 96%;
+        overflow-x: scroll;
+    }
+}

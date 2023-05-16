@@ -1,0 +1,393 @@
+.course-navbar-temp {
+  display: none;
+  float: center;
+  /* color: #f2f2f2; */
+  text-align: center;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  font-size: 1.25rem;
+  text-align: center;
+  background-color: #bfdff1;
+}
+
+.course-navbar-temp > a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.course-navbar-temp > a:hover {
+  color: #004aad;
+}
+
+.indiv-course-container {
+  /* height: 100%; */
+  height: 2000px;
+}
+
+/* ============= Student Stream Navigation ============ */
+
+.stream-navigation{
+  position:absolute;
+  background: #BFDFF1;
+  transition: 0.2s;
+  top: 135px;
+  left: 50px;
+  width: 280px;
+  height: 450px;
+  border-radius: 30px;
+}
+
+.stream-navigation img{
+  margin-left: 14px;
+  margin-top: 15px;
+}
+
+.stream-navigation ul{
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+}
+
+.stream-navigation ul li{
+  position: relative;
+  width: 100%;
+  list-style: none;
+  top: 10px;
+  left: 0px;
+}
+
+.stream-navigation ul li{
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.stream-navigation ul li:hover,
+.stream-navigation ul li.hovered
+{
+  background-color: #FFFFFF;
+}
+
+.stream-navigation ul li:nth-child(1){
+  margin-bottom: 10px;
+  pointer-events: none;
+}
+
+.stream-navigation ul li a{
+  position: relative;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #454545; 
+}
+.stream-navigation ul li a .stream{
+  color: #0057FE;
+  font-weight:600;
+  position:relative;
+  display: block;
+  min-width: 60px;
+  height: 55px;
+  line-height: 65px;
+  text-align: center;
+  padding: 0 20px;
+  
+}
+.stream-navigation ul li a .stream ion-icon{
+  font-size: 1.40rem;
+}
+
+.stream-navigation ul li:hover a,
+.stream-navigation ul li.hovered a{
+  color: #0057FE;
+  font-weight:600;
+}
+
+.stream-navigation ul li a .icon{
+  position:relative;
+  display: block;
+  min-width: 60px;
+  height: 55px;
+  line-height: 65px;
+  text-align: center;
+}
+.stream-navigation ul li a .icon ion-icon{
+  font-size: 1.40rem;
+}
+
+.stream-navigation ul li a .title{
+  position: relative;
+  display: block;
+  padding: 0 20px;
+  height: 20px;
+  line-height: 50px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+/* ============= Curve Outside ============ */
+.stream-navigation ul li:hover a::before,
+.stream-navigation ul li.hovered a::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 35px 35px 0 10px #FFFFFF;
+}
+.stream-navigation ul li:hover a::after,
+.stream-navigation ul li.hovered a::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 35px -35px 0 10px #FFFFFF;
+}
+/* ============= Student Stream ============ */
+.main {
+  position: absolute;
+  width: calc(100% - 400px);
+  left: 400px;
+  min-height: 100%;
+  /* height: 100%; */
+  background-color:#FFFFFF; 
+  transition: 0.6s;
+  padding-top: 30px;
+  scroll-behavior: smooth;
+}
+
+.course{
+  display: flex;
+  align-items: flex-start;
+  color: #0057FE;
+  align-items: flex-start;
+  font-size: 17px;
+}
+
+.section{
+  position:relative;
+  margin-top:15px;
+  display:flex;
+  justify-content:left;
+  align-items: flex-start;
+  font-size: 16px;
+  cursor: pointer;
+  color: #454545;
+}
+.section hr {
+  position: absolute;
+  width: 900px;
+  border: 0.5px solid #BFDFF1;
+  margin-top: 60px;
+}
+
+.post {
+  max-width: 900px;
+  margin-top: 3%;
+  display: flex;
+  border-radius: 10px;
+  position: relative;
+  display: block;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-bottom:200px;
+
+}
+.post form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+}
+.person {
+  flex-direction: row;
+  row-gap: 50px;
+}
+.post label {
+  font-weight:500;
+  font-family: "poppins", sans-serif;
+  color: #0057FE;
+  padding-left: 12px;
+  padding-top: 10px;
+  position:absolute;
+  font-size: 15px;
+}
+.person{
+  padding-left: 20px;
+}
+
+.post input,
+.post textarea {
+  padding: 5px;
+  margin-top: 15px;
+  border: 1px solid #BFDFF1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 4px 4px 50px 2px rgba(191, 223, 241, 0.5);
+}
+.post textarea {
+  height: 150px;
+}
+
+
+.post button {
+  background-color: #BFDFF1;
+  color: #0057FE;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  box-shadow: 4px 4px 50px 2px rgba(191, 223, 241, 0.5);
+}
+.post textarea:hover{
+  transform: scale(1.02);
+  transition: ease-in-out 0.3s;  
+  background-color: #BFDFF1; 
+  }
+.post button:hover{
+  transform: scale(1.01);
+  transition: ease-in-out 0.3s;  
+}
+.details-list {
+  margin-top: 20px;
+}
+
+.details {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #BFDFF1;
+  box-shadow: 4px 4px 50px 2px rgba(191, 223, 241, 0.5);
+  border-radius: 10px;
+}
+.details:hover{
+  transform: scale(1.005);
+  transition: ease-in-out 0.3s;   
+}
+
+.details h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: "poppins", sans-serif;
+  color: #0057FE;
+  font-size: 15px;
+  font-weight: 500;
+  left: 20px;
+  padding-left: 60px;
+  padding-top: -40px;
+  position:static;
+
+}
+.details img{
+  position:absolute;
+}
+.details h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: "poppins", sans-serif;
+  color: #877F7F;
+  font-size: 13px;
+  font-weight: 500;
+  padding-left: 60px;
+
+}
+.details p {
+  margin: 20px;
+  font-size: 14px;
+  line-height: 25px;
+}
+.view a .icon ion-icon{
+  font-size: 1.5rem;
+  color: #0057FE;
+  margin-left:820px;
+}
+.view a .icon ion-icon:hover{
+  transform: scale(1.5);
+  transition: ease-in-out 0.3s;  
+  color: #454545;
+
+}
+
+.icon {
+  padding-top: 15px;
+}
+
+
+@media (min-width: 936px) and (max-width: 1366px) {
+  .main{
+      overflow: hidden;
+      width: 500px;
+
+  }
+  .stream-navigation{
+      /* height: 40%; */
+      align-items: flex-start;
+      margin-top: 30px;
+      top:auto;
+      
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 935px) {
+  .indiv-course-container {
+    height: 2500px;
+  }
+
+  .main{
+      overflow: hidden;
+      width: 330px;
+      width: calc(100% -280px );
+      left: 260px;
+  }
+
+  .stream-navigation{
+      /* height: 40%; */
+      align-items: flex-start;
+      width: 220px;   
+      left: 20px;
+      padding-top: 30px;
+      margin-top: 30px;
+      top:auto;
+  }
+  
+
+  .stream-navigation img{
+      width: 195px;
+      /* margin-left: -20px; */
+  }
+
+}  
+@media (max-width: 599px) {
+  .indiv-course-container {
+    height: 3000px;
+  }
+
+  .main{
+      overflow: hidden;
+      width: 235px;
+      width: calc(100% -100px );
+      left: 90px;
+  }
+
+  .stream-navigation {
+    display: none;
+  }
+
+  .course-navbar-temp {
+    display: block;
+  }
+}  

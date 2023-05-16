@@ -1,0 +1,437 @@
+  /* ============= Google Fonts ============ */
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,300&display=swap');
+  
+  /* ============= Globals ============ */
+  *{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root{
+    --blue: #0057FE;
+    --lightblue: #BFDFF1; 
+    --white: #ffffffff;
+    --gray: #454545;
+    --lightgray: #877F7F;
+  }
+  
+  html, body{
+    height: 100%;
+  }
+
+  .course-navbar-temp {
+    display: none;
+    float: center;
+    /* color: #f2f2f2; */
+    text-align: center;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: #bfdff1;
+  }
+  
+  .course-navbar-temp > a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  
+  .course-navbar-temp > a:hover {
+    color: #004aad;
+  }
+
+  .indiv-classwork-container {
+    height: 100%;
+  }
+
+  /* ============= Student Classwork Navigation ============ */
+  
+  .work-navigation{
+    position:absolute;
+    background: #BFDFF1;
+    transition: 0.2s;
+    top: 135px;
+    left: 50px;
+    width: 280px;
+    height: 450px;
+    border-radius: 30px;
+  }
+  
+  .work-navigation img{
+    margin-left: 14px;
+    margin-top: 15px;
+  }
+  
+  .work-navigation ul{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+  }
+  
+  .work-navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    top: 10px;
+    left: 0px;
+  }
+  
+  .work-navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  
+  .work-navigation ul li:hover,
+  .work-navigation ul li.hovered
+  {
+    background-color: #FFFFFF;
+  }
+  
+  .work-navigation ul li:nth-child(1){
+    margin-bottom: 10px;
+    pointer-events: none;
+  }
+  
+  .work-navigation ul li a{
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #454545; 
+  }
+  .work-navigation ul li a .work{
+    color: #0057FE;
+    font-weight:600;
+    position:relative;
+    display: block;
+    min-width: 60px;
+    height: 55px;
+    line-height: 63px;
+    text-align: center;
+    padding: 0 20px;
+    
+  }
+  
+  .work-navigation ul li a .work ion-icon{
+    font-size: 1.40rem;
+    height: 59px;
+  }
+  
+  
+  .work-navigation ul li:hover a,
+  .work-navigation ul li.hovered a{
+    color: #0057FE;
+    font-weight:600;
+  }
+  
+  .work-navigation ul li a .icon{
+    position:relative;
+    display: block;
+    min-width: 60px;
+    height: 55px;
+    line-height: 63px;
+    text-align: center;
+  }
+  .work-navigation ul li a .icon ion-icon{
+    font-size: 1.40rem;
+  }
+  
+  .work-navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    height: 20px;
+    line-height: 55px;
+    text-align: start;
+    white-space: nowrap;
+  }
+  
+  /* ============= Curve Outside ============ */
+  .work-navigation ul li:hover a::before,
+  .work-navigation ul li.hovered a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 35px 35px 0 10px #FFFFFF;
+  }
+  .work-navigation ul li:hover a::after,
+  .work-navigation ul li.hovered a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 35px -35px 0 10px #FFFFFF;
+  }
+  /* ============= Header ============ */
+   /* ============= Header ============ */
+  .main {
+    position: absolute;
+    width: calc(100% - 400px);
+    left: 400px;
+    min-height: 100%;
+    background-color:#FFFFFF; 
+    transition: 0.6s;
+    padding-top: 30px;
+    scroll-behavior: smooth;
+  }
+  
+  .course{
+    display: flex;
+    align-items: flex-start;
+    color: #0057FE;
+    align-items: flex-start;
+    font-size: 17px;
+  }
+  
+  .section{
+    position:relative;
+    margin-top:15px;
+    display:flex;
+    justify-content:left;
+    align-items: flex-start;
+    font-size: 15px;
+    cursor: pointer;
+    color: #454545;
+  }
+  .section hr {
+    position: absolute;
+    width: 900px;
+    border: 0.5px solid #6eb3e7;
+    margin-top: 60px;
+  }
+  
+  /* ============= Classwork ============ */
+.classwork{
+    width: 100%;
+    display: grid;
+    align-items: self-start;
+    position: absolute;
+    width: calc(100% - 200px);
+    min-height: 100%;
+    background-color:#FFFFFF;  
+    transition: 0.6s;
+    padding-top: 25px;
+    scroll-behavior: smooth;
+    }
+    
+.classwork h2{
+    color: #0057FE;
+    padding-top:0%;
+    font-size: 28px;
+    font-weight: 500;
+    }
+.work h2 {
+      position: relative;
+    }
+
+.work hr {
+    position: absolute;
+    width: 900px;
+    border: 0.5px solid #BFDFF1;
+    margin-top: 15px;
+    color: #BFDFF1;
+    }
+    
+.work-list {
+    position:absolute;
+    display: flex;
+    padding-top: 30px;
+    flex-direction: row;
+    
+    }
+.work-list tr td a ion-icon{
+    font-size: 1.30rem;
+}
+.work-list td{
+    padding: 20px 50px;
+    position: relative;
+    padding-right: 50px;  
+}
+.work-list tr{
+    padding: 30px 30px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 50px 2px rgba(191, 223, 241, 0.5);
+}
+    
+.work-list tr:hover{
+    transform: scale(1.01);
+    transition:step-start 0.1; 
+    border: none;
+    cursor: pointer;
+    box-shadow: 4px 4px 50px 2px rgba(191, 223, 241, 0.5);
+    color: #0057FE;
+    }
+
+.work-list tr td a:hover{
+    transform: scale(1.01);
+    transition:step-start 0.3s;  
+    color: #6eb3e7;
+  }
+  
+  .icon {
+    padding-top: 15px;
+  }
+
+  @media (min-width: 936px) and (max-width: 1366px) {
+    .main{
+        overflow: hidden;
+        width: calc(100%-310px);
+        left: 310px;
+    
+    }
+    .work-list tr td a ion-icon{
+        font-size: 1.20rem;
+    }
+    .work-list td{
+        padding: 10px 53px;
+        padding-right: 34px;  
+        height:fit-content;
+    }
+    .work-navigation{
+        /* height: 40%; */
+        align-items: flex-start;
+        margin-top: 30px;
+        top:auto;
+        left: auto;
+    
+    }
+    .course{
+        font-size: 15px;
+    }
+    .section{
+        font-size: 12px;
+    }
+    .classwork h2{
+        font-size: 25px;
+        padding-top: -55px;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 935px) {
+
+    .main{
+        overflow: hidden;
+        width: 400px;
+        width: calc(100% -100px );
+        left: 160px;
+    }
+
+    .work-navigation{
+        display: none;
+        /* height: 40%;
+        align-items: flex-start;
+        width: 130px;   
+        left: 10px;
+        padding-top: 30px;
+        margin-top: 30px;
+        top:auto; */
+    } 
+    .course-navbar-temp {
+      display: block;
+    }
+
+    .work-navigation ul li a .icon ion-icon{
+        font-size: 1.0rem;
+    }   
+
+    .work-navigation ul li a .icon{
+        min-width:30px;
+        left: -15px;
+    }
+    .work-navigation img{
+        width: 110px;
+        margin-left: -20px;
+    }
+    .work-navigation ul li a .title{
+        padding: 0 0;
+        height: 15px;
+        left: -10px;
+    }
+    .course{
+        font-size: 15px;
+    }
+    .section{
+        font-size: 12px;
+    }
+    .classwork h2{
+        font-size: 25px;
+
+    
+    }
+
+}  
+@media (max-width: 599px) {
+    .main{
+        overflow: hidden;
+        width: 235px;
+        width: calc(100% -100px );
+        left: 100px;
+    }
+
+    .work-navigation{
+      display: none;
+  } 
+  .course-navbar-temp {
+    display: block;
+  }
+
+    
+    .work-list{
+        padding-top: 10px;
+        width: auto;
+    }
+    .work-navigation ul li a .icon ion-icon{
+        font-size: 1.0rem;
+    }   
+
+    .work-navigation ul li a .icon{
+        min-width:30px;
+        left: -15px;
+    }
+    .work-navigation img{
+        width: 110px;
+        margin-left: -20px;
+    }
+    .work-navigation ul li a .title{
+        padding: 0 0;
+        height: 15px;
+        left: -10px;
+        
+    }
+    .course{
+        font-size: 13px;
+    }
+    .section{
+        font-size: 10px;
+    }
+    .classwork h2{
+        font-size: 20px;
+        padding: 0%;
+
+    
+    }
+    .work-list td{
+        padding: 1px 13px;
+        overflow:hidden ;
+        font-size: 12px;
+    }
+}

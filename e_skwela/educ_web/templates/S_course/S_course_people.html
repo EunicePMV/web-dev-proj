@@ -1,0 +1,234 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block script %}
+    <link href="{% static 'S_course/S_course_people.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    People
+{% endblock %}
+
+{% block body %}
+    <div class="course-navbar-temp">
+        <a href="{% url 'student_stream' %}">Stream</a>
+        <a href="{% url 'student_classwork' %}">Classwork</a>
+        <a href="{% url 'student_people' %}">People</a>
+    </div>
+    <!--============= Navigation for People Page ==================-->
+    <div class="indiv-people-container">
+        <div class="people-navigation">
+            <ul>
+                <img src="{% static 'images/d6.png' %}" width=250px height=200px>
+                <li>
+                    <a href="{% url 'student_stream' %}">
+                        <span class="icon">
+                            <ion-icon name="filter-outline"></ion-icon>
+                        </span>
+                        <span class="title">Stream</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'student_classwork' %}">
+                        <span class="icon">
+                            <ion-icon name="create-outline"></ion-icon>
+                        </span>
+                        <span class="title">Classwork</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'student_people' %}">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">People</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+<!--============= Header ==================-->
+
+    <div class="main">
+        <div class="course">
+            <h1>COMP 20163 : Web Development</h1>
+          </div>
+
+            <div class="section">
+                <h3>BSCS 3-1</h3><br><br><br>
+
+            </div>
+  <!--============= People Page ==================-->
+  <div class="list">
+    <div class="members">
+        <div class="teacher">
+            <h2>Teachers</h2> <hr>
+        <table class="teacher-list">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn2.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Kris Garcia</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+        <div class="student">
+            <h2>Students</h2> <hr>  
+        </div>
+        <table class="student-list">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn1.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn3.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn4.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn5.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn6.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn7.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn8.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn9.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn10.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn3.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn4.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn3.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn4.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn5.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="img-box">
+                        <img src="{% static 'images/prsn6.png' %}" width="40px" height="40px">
+                        </div>
+                    </td>
+                    <td>Juan Dela Cruz</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div> 
+</div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+{% endblock %}

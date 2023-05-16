@@ -1,0 +1,117 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block script %}
+    <link rel="stylesheet" href="{% static 'I_people/I_people.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet" />
+
+    <script src="{% static 'I_people/I_people.js' %}" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+        integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block title %}
+    Students
+{% endblock %}
+
+{% block body %}
+    <div class="course-navbar-temp">
+        <a href="{% url 'instruct_stream' %}">Stream</a>
+        <a href="{% url 'student_classwork' %}">Classwork</a>
+        <a href="{% url 'instruct_people' %}">People</a>
+        <a href="{% url 'mark' %}">Grades</a>
+    </div>
+    <!-- <header></header> -->
+    <main>
+        <div class="instructor">
+            <div id="i-profile">
+                <img
+                    src="https://yt3.ggpht.com/7qgVlNH_i-M7g3rwVfGHo5B3j-llO4sxKDdh4IWoHkwfO8JMhd2EoW6gcge_R_-t-ldUWMxJZQ=s88-c-k-c0x00ffffff-no-rj">
+            </div>
+            <span id="i-name">Rizal, Jose P.</span>
+        </div>
+        <hr>
+        <section id="tableHandler">
+            <div id="selectAll">
+                <div id="selection">
+                    <input id="selectCheck" type="checkbox">
+                    <span id="select">Select all</span>
+                </div>
+                <button id="selectButton" disabled="true">
+                    <i class="fa-solid fa-trash fa-sm"></i>
+                </button>
+            </div>
+            <div id="students">
+                <table>
+                    <tr>
+                        <th id="sort">
+                            <span id="sorter">
+                                <i class="fa-solid fa-sort fa-lg"></i>
+                            </span>
+                        </th>
+                        <th>Name</th>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input class="tickboxes" type="checkbox"></td>
+                        <td>
+                            <div class="info">
+                                <span class="name">Mabini, Apolinario</span>
+                                <span class="email">kkkApolinario@bayaniNgbayan.yahoo.com</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input class="tickboxes" type="checkbox"></td>
+                        <td>
+                            <div class="info">
+                                <span class="name">Aguinaldo, Emilio</span>
+                                <span class="email">kkkAguinaldo@bayaniNgbayan.yahoo.com</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input class="tickboxes" type="checkbox"></td>
+                        <td>
+                            <div class="info">
+                                <span class="name">Jacinto, Emilio</span>
+                                <span class="email">kkkEmilioo@bayaniNgbayan.yahoo.com</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input class="tickboxes" type="checkbox"></td>
+                        <td>
+                            <div class="info">
+                                <span class="name">Luna, Antinio</span>
+                                <span class="email">kkkAntonio@bayaniNgbayan.yahoo.com</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input class="tickboxes" type="checkbox"></td>
+                        <td>
+                            <div class="info">
+                                <span class="name">De Jesus, Gregoria</span>
+                                <span class="email">kkkGregoria@bayaniNgbayan.yahoo.com</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input class="tickboxes" type="checkbox"></td>
+                        <td>
+                            <div class="info">
+                                <span class="name">Aquino, Melchora</span>
+                                <span class="email">kkkAquino@bayaniNgbayan.yahoo.com</span>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+    </main>
+{% endblock %}

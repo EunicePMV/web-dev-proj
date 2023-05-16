@@ -1,0 +1,458 @@
+/* ============= Google Fonts ============ */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,300&display=swap');
+
+/* ============= Globals ============ */
+*{
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --blue: #0057FE;
+  --lightblue: #BFDFF1; 
+  --white: #ffffffff;
+  --gray: #454545;
+  --lightgray: #877F7F;
+}
+
+html, body{
+  height: 100%;
+}
+.nav-link {
+  font-weight: bold;
+  color: #454545;
+}
+
+.course-navbar-temp {
+  display: none;
+  float: center;
+  /* color: #f2f2f2; */
+  text-align: center;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  font-size: 1.25rem;
+  text-align: center;
+  background-color: #bfdff1;
+}
+
+.course-navbar-temp > a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.course-navbar-temp > a:hover {
+  color: #004aad;
+}
+
+.indiv-people-container {
+  height: 100%;
+  height: 1800px;
+}
+
+/* ============= People Stream Navigation ============ */
+
+.people-navigation{
+  position:absolute;
+  background: #BFDFF1;
+  transition: 0.2s;
+  top: 135px;
+  left: 50px;
+  width: 280px;
+  height: 55%;
+  border-radius: 30px;
+}
+
+.people-navigation img{
+  margin-left: 14px;
+  margin-top: 15px;
+}
+
+.people-navigation ul{
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+}
+
+.people-navigation ul li{
+  position: relative;
+  width: 100%;
+  list-style: none;
+  top: 10px;
+  left: 0px;
+}
+
+.people-navigation ul li{
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.people-navigation ul li:hover,
+.people-navigation ul li.hovered
+{
+  background-color: #FFFFFF;
+}
+
+.people-navigation ul li:nth-child(1){
+  margin-bottom: 10px;
+  pointer-events: none;
+}
+
+.people-navigation ul li a{
+  position: relative;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #454545; 
+}
+.people-navigation ul li a .people{
+  color: #0057FE;
+  font-weight:600;
+  position:relative;
+  display: block;
+  min-width: 60px;
+  height: 55px;
+  line-height: 63px;
+  text-align: center;
+  padding: 0 20px;
+  
+}
+
+.people-navigation ul li a .people ion-icon{
+  font-size: 1.40rem;
+  height: 59px;
+}
+
+
+.people-navigation ul li:hover a,
+.people-navigation ul li.hovered a{
+  color: #0057FE;
+  font-weight:600;
+}
+
+.people-navigation ul li a .icon{
+  position:relative;
+  display: block;
+  min-width: 60px;
+  height: 55px;
+  line-height: 63px;
+  text-align: center;
+}
+.people-navigation ul li a .icon ion-icon{
+  font-size: 1.40rem;
+}
+
+.people-navigation ul li a .title{
+  position: relative;
+  display: block;
+  padding: 0 20px;
+  height: 20px;
+  line-height: 55px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+/* ============= Curve Outside ============ */
+.people-navigation ul li:hover a::before,
+.people-navigation ul li.hovered a::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 35px 35px 0 10px #FFFFFF;
+}
+.people-navigation ul li:hover a::after,
+.people-navigation ul li.hovered a::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 35px -35px 0 10px #FFFFFF;
+}
+/* ============= Header ============ */
+.main {
+  position: absolute;
+  width: calc(100% - 400px);
+  left: 400px;
+  min-height: 100%;
+  background-color:#FFFFFF; 
+  transition: 0.6s;
+  padding-top: 30px;
+  scroll-behavior: smooth;
+}
+
+.course{
+  display: flex;
+  align-items: flex-start;
+  color: #0057FE;
+  align-items: flex-start;
+  font-size: 17px;
+}
+
+.section{
+  position:relative;
+  margin-top:15px;
+  display:flex;
+  justify-content:left;
+  align-items: flex-start;
+  font-size: 16px;
+  cursor: pointer;
+  color: #454545;
+}
+.section hr {
+  position: absolute;
+  width: 900px;
+  border: 0.5px solid #BFDFF1;
+  margin-top: 60px;
+}
+/* ============= People ============ */
+
+.list {
+    width: 100%;
+    display: grid;
+    align-items: self-start;
+    position: absolute;
+    width: calc(100% - 500px);
+    min-height: 100%;
+    background-color:#FFFFFF;  
+    transition: 0.6s;
+    padding-top: 25px;
+    scroll-behavior: smooth;
+
+  }
+  .img-box{
+    position: relative;
+    width: 40px;
+    height: 40px; 
+    padding-right: 50px;
+    
+  }
+.list h2{
+  color: #0057FE;
+  padding-top:0%;
+  font-size: 28px;
+  font-weight: 500;
+}
+.teacher hr {
+    position: absolute;
+    width: 900px;
+    border: 0.5px solid #BFDFF1;
+    margin-top: 15px;
+    color: #BFDFF1;
+}
+
+.teacher-list {
+  position:relative;
+  display: flex;
+  padding-top: 30px;
+}
+.teacher{
+  padding-bottom: 50px;
+}
+
+.teacher-list tr:hover{
+    transform: scale(1.05);
+    transition:step-start 1.0s;  
+    color: #0057FE;
+    
+  }
+
+.student h2 {
+    position: relative;
+
+}
+.student hr {
+  position: absolute;
+  width: 900px;
+  border: 0.5px solid #BFDFF1;
+  margin-top: 15px;
+  color: #BFDFF1;
+}
+
+.student-list {
+  position:relative;
+  display: flex;
+  padding-top: 30px;
+  flex-direction: row;
+
+}
+
+.student-list td{
+  padding: 9px 5px;
+}
+
+.student-list tr:hover{
+  transform: scale(1.05);
+  transition:step-start 1.0s;  
+  color: #0057FE;
+  
+}
+
+.icon {
+  padding-top: 15px;
+}
+
+@media (min-width: 936px) and (max-width: 1366px) {
+  .list{
+      overflow: hidden;
+      width: calc(100%px);
+      width: 100%;
+  }
+  .people-navigation{
+      /* height: 40%; */
+      align-items: flex-start;
+      margin-top: 30px;
+      top:auto;
+      left: 50px;
+  
+  }
+  .student-list{
+      position: absolute;
+  }
+  .student-list td{
+      position:relative;
+  }
+  .course{
+      font-size: 13px;
+  }
+  .section{
+      font-size: 10px;
+      margin-top: 5px;
+  }
+  .list h2{
+      font-size: 24px;
+      padding-top: -55px;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 935px) {
+
+  .list{
+      overflow: hidden;
+      width: 100%;
+      left: -200px
+
+  }
+
+  .people-navigation{
+      display: none;
+      /* height: 40%; */
+      /* align-items: flex-start;
+      width: 132px;   
+      left: 10px;
+      padding-top: 30px;
+      margin-top: 30px;
+      top:auto; */
+  } 
+
+  .course-navbar-temp {
+    display: block;
+  }
+
+  .people-navigation ul li a .icon ion-icon{
+      font-size: 1.0rem;
+  }   
+
+  .people-navigation ul li a .icon{
+      min-width:30px;
+      left: -15px;
+  }
+  .people-navigation img{
+      width: 110px;
+      margin-left: -20px;
+  }
+  .people-navigation ul li a .title{
+      padding: 0 0;
+      height: 15px;
+      left: -10px;
+  }
+  .course{
+      font-size: 13px;
+      margin-left: -200px;
+  }
+  .section{
+      font-size: 10px;
+      margin-left: -200px;
+  }
+  .list h2{
+      font-size: 25px;
+
+  
+  }
+
+}  
+@media (max-width: 599px) {
+  .list{
+      overflow: hidden;
+      width: calc(100% - 100px);
+      width: 100%;
+      left: -200px;
+  }
+
+  .people-navigation{
+    display: none;
+} 
+
+.course-navbar-temp {
+  display: block;
+}
+
+  .people-navigation{
+      height: 40%;
+      align-items: flex-start;
+      width: 132px;   
+      left: 10px;
+      padding-top: 30px;
+      margin-top: 30px;
+      top:auto;
+  } 
+
+  .people-navigation ul li a .icon ion-icon{
+      font-size: 1.0rem;
+  }   
+
+  .people-navigation ul li a .icon{
+      min-width:30px;
+      left: -15px;
+  }
+  .people-navigation img{
+      width: 110px;
+      margin-left: -20px;
+  }
+  .people-navigation ul li a .title{
+      padding: 0 0;
+      height: 15px;
+      left: -10px;
+  }
+  .course{
+      font-size: 10px;
+      margin-left: -250px;
+  }
+  .section{
+      font-size: 8px;
+      margin-left: -250px;
+  }
+  .list h2{
+      font-size: 25px;
+
+  
+  }
+
+}  

@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block script %}
+  <link href="{% static 'login/login.css' %}" rel="stylesheet">
+  <script src="{% static 'login/login.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+  Login
+{% endblock %}
+
+{% block navbar %}
+  <nav>
+    <a href="{% url 'about' %}">About Us</a>
+  </nav>
+{% endblock %}
+
+{% block body %}
+  <div class="login-container">
+    <div class="sub-container">
+      <div class="main-form">
+        <form action="" class="form">
+          <h2 id="log">LOGIN</h2>
+          <p class="label">Email</p>
+          <input type="email" name="email" class="box" placeholder="Enter Email">
+          <p class="label">Password</p>
+          <input type="password" name="password" class="box" placeholder="Enter Password">
+          <!-- <input type="submit" value="SIGN IN" id="submit"> -->
+          <span  style="text-align: center;" id="submit">SIGN IN</span>
+          <p class="message1"><a href="#">Forgot password?</a></p>
+          <p class="message1">or continue with</p>
+          <div class="alt-signin">
+            <button class="btn-altsignin"><img src="{% static '/images/google.png' %}" alt="google"></button>
+            <button class="btn-altsignin"><img src="{% static '/images/facebook.png' %}" alt="facebook"></button>
+            <p class="message2">Don't have an account yet?</p>
+            <a href="{% url 'register' %}">Register for free</a>
+          </div>
+        </form>
+      </div>
+      <div class="side">
+        <img src="{% static '/images/logo.png' %}" alt="logo">
+        <h2 class="side-headings">ENJOY</h2>
+        <p class="side-small">Appreciate every bit</p><br>
+        <h2 class="side-headings">LEARN</h2>
+        <p class="side-small">Gain and acquire knowledge</p>
+        <img src="{% static '/images/girl.png' %}" alt="girl">
+      </div>
+    </div>
+  </div>
+{% endblock %}

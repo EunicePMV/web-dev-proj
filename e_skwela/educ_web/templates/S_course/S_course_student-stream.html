@@ -1,0 +1,154 @@
+<!-- main problem: footer does not move, navbar not responsive -->
+
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block script %}
+    <link href="{% static 'S_course/S_course_student-stream.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    Course
+{% endblock %}
+
+{% block body %}
+    <div class="course-navbar-temp">
+        <a href="{% url 'student_stream' %}">Stream</a>
+        <a href="{% url 'student_classwork' %}">Classwork</a>
+        <a href="{% url 'student_people' %}">People</a>
+    </div>
+    <div class="indiv-course-container">
+        <div class="stream-navigation">
+            <ul>
+                <img src="{% static 'images/d6.png' %}" width=250px height=200px>
+                <li>
+                    <a href="{% url 'student_stream' %}">
+                        <span class="icon">
+                            <ion-icon name="filter-outline"></ion-icon>
+                        </span>
+                        <span class="title">Stream</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'student_classwork' %}">
+                        <span class="icon">
+                            <ion-icon name="create-outline"></ion-icon>
+                        </span>
+                        <span class="title">Classwork</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'student_people' %}">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">People</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    <!--============= Main ==================-->
+    <div class="main">
+        <div class="course">
+            <h1>COMP 20163 : Web Development</h1>
+        </div>
+
+            <div class="section">
+                <h3>BSCS 3-1</h3><br><br><br>
+                <hr>
+            </div>
+
+            <div class="post">
+                    <div class="person">
+                    <img src="{% static 'images/prsn1.png' %}" width=40px height=40px>
+                    <label for="details">Juan dela Cruz </label>
+                    </div>
+                    
+                    <form>
+                    <textarea id="details" name="details" required></textarea>
+                    <button type="submit">Post</button>
+                    </form>
+
+                    <div class="details-list">
+                    <div class="details">
+                        <img src="{% static 'images/prsn2.png' %}" width=40px height=40px>
+                        <h3>Kris Garcia</h3>
+                        <h4>9 May</h4>
+                        <p>Good morning class! Kindly upload your Online Class Agreement. Before uploading make sure to check the filename format.
+
+                            Format: Lastname_BSCS 3-1_OCA
+                            </p>
+                            <div class="view">  
+                                <a href="">
+                                        <span class="icon">
+                                            <ion-icon name="eye-outline"></ion-icon>
+                                        </span>
+                                    </a></div>  
+                    </div>
+                    
+                    <div class="details">
+                        <img src="{% static 'images/prsn2.png' %}" width=40px height=40px>
+                        <h3>Kris Garcia</h3>
+                        <h4>9 May</h4>
+                        <p>Posted a new Assignment: Laboratory Activity 3</p>
+                        <div class="view">  
+                        <a href="">
+                                <span class="icon">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </span>
+                            </a></div>  
+                    </div>
+
+                    <div class="details">
+                        <img src="{% static 'images/prsn1.png' %}" width=40px height=40px>
+                        <h3>Juan dela Cruz</h3>
+                        <h4>9 May</h4>
+                        <p>Good day Professor Kris Garcia!<br>
+
+                            I'm worried since I accidentally submitted the wrong file for one of our activities yesterday because I failed to follow your instructions well. The mistake is on my end; I have sent the relevant activity you are asking for in your email again.<br>
+                            
+                            Thank you, and enjoy your day!</p>
+                        <div class="view">  
+                        <a href="">
+                                <span class="icon">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </span>
+                            </a></div>  
+                    </div>
+
+                    <div class="details">
+                        <img src="{% static 'images/prsn1.png' %}" width=40px height=40px>
+                        <h3>Juan dela Cruz</h3>
+                        <h4>9 May</h4>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <div class="view">  
+                        <a href="">
+                                <span class="icon">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </span>
+                            </a></div>  
+                    </div>
+
+                    <div class="details">
+                        <img src="{% static 'images/prsn1.png' %}" width=40px height=40px>
+                        <h3>Juan dela Cruz</h3>
+                        <h4>9 May</h4>
+                        <p>Lorem ipsum dolor sit amet, <br>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        <div class="view">  
+                        <a href="">
+                                <span class="icon">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </span>
+                            </a></div>  
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+{% endblock %}
